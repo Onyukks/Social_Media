@@ -16,7 +16,7 @@ const Messages = () => {
     const socket = useRef();
 
     useEffect(()=>{
-       socket.current = io("http://localhost:5000");
+       socket.current = io("https://social-media-sk8x.onrender.com");
     },[])
   
 
