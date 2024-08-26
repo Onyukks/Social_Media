@@ -1,0 +1,15 @@
+.headings{
+    display: flex;
+    gap:20px;
+}
+.header{
+    border: transparent;
+    background-color: var(--color-card);
+    padding: 10px;
+    border-radius: 18%;
+}
+@media (max-width:760px) {
+    .headings h4{
+        font-size: 13px;
+    }
+}

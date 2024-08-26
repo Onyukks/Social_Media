@@ -1,0 +1,45 @@
+.feeds {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 2rem;
+}
+
+.feed {
+    padding: 20px;
+    border-radius: .5rem;
+    background: var(--color-card);
+    width: 100%;
+    overflow: hidden;
+}
+
+.feed .top-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.feed p {
+    margin-bottom: 1rem;
+}
+
+.feed .mid-content img, 
+.feed .mid-content video {
+    max-height: 400px;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.feed .bottom-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.like {
+    color: var(--color-primary);
+}
