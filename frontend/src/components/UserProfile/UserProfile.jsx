@@ -14,6 +14,7 @@ const UserProfile = () => {
   const [userfriendRequests, setUserfriendRequests] = useState([]);
   const { currentUser } = useContext(AuthContext);
   const [openUpdate, setOpenUpdate] = useState(false);
+  const [text,setText] = useState('Send Friend Request')
 
   useEffect(() => {
     const getUser = async () => {
@@ -43,8 +44,7 @@ const UserProfile = () => {
           requesterId: currentUser._id, recipientId:id
         })
         alert("Friend Request Sent Successfully")
-        window.location.reload()
-
+        setText('Friend Request Sent')
       } catch (error) {
         alert(error.response.data.message)
       }
@@ -84,7 +84,7 @@ const UserProfile = () => {
           )}
           {canSendFriendRequest && (
             <button className='btn btn-primary' onClick={handleSendRequest}>
-              <FontAwesomeIcon icon={faFeed} /> Send Friend Request
+              <FontAwesomeIcon icon={faFeed} />{text}
             </button>
           )}
         </div>
