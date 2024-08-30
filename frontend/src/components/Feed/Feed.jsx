@@ -1,7 +1,7 @@
 import './Feeds.css'
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faComment, faHeart, faShare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faHeart, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { useState, useContext, useEffect } from 'react';
 import Comments from '../Comments/Comments';
 import {format} from 'timeago.js'
@@ -81,9 +81,6 @@ const Feed = ({feed,postId}) => {
                 </div>
                 <div className="action-item">
                     <span><FontAwesomeIcon icon={faComment} onClick={commentHandler}/> {comments.length} comments</span>
-                </div>
-                <div className="action-item">
-                    <span><FontAwesomeIcon icon={faShare}/> 6 Shares</span>
                 </div>
             </div>
             {openComment && <Comments postId={feed._id} comments={comments} setComment={setComment}/>}
